@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES=1 python predict.py \
+CUDA_VISIBLE_DEVICES=0 python predict.py \
                 --sceneflow=1    --maxdisp=192 \
                 --crop_height=576  --crop_width=960  \
                 --data_path='./dataset/SceneFlow/' \

@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES=1 python predict.py \
+CUDA_VISIBLE_DEVICES=0 python predict.py \
                 --kitti2012=1    --maxdisp=192 \
                 --crop_height=384  --crop_width=1248  \
                 --data_path='./dataset/kitti2012/testing/' \
