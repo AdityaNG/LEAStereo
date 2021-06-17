@@ -1,0 +1,4 @@
+mkdir /storage/datasets
+mkdir /storage/datasets/kitti2015
+wget -c https://s3.eu-central-1.amazonaws.com/avg-kitti/data_scene_flow.zip -O /storage/kitti2015/kitti2015.zip
+unzip /storage/kitti2015/kitti2015.zip -d /storage/datasets/kitti2015
