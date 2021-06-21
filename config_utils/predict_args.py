@@ -5,7 +5,7 @@ def obtain_predict_args():
     parser = argparse.ArgumentParser(description='LEStereo Prediction')
     parser.add_argument('--crop_height', type=int, required=True, help="crop height")
     parser.add_argument('--crop_width', type=int, required=True, help="crop width")
-    parser.add_argument('--save_alter', type=bool, default=True, help="Alter save dimentions")
+    parser.add_argument('--save_alter', type=bool, default=False, help="Alter save dimentions")
     parser.add_argument('--save_height', type=int, default=370, help="save height")
     parser.add_argument('--save_width', type=int, default=1226, help="save width")
     parser.add_argument('--maxdisp', type=int, default=192, help="max disp")
