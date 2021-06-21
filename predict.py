@@ -248,7 +248,9 @@ def test_kitti(leftname, rightname, savename):
         temp = temp[0, opt.crop_height - height: opt.crop_height, opt.crop_width - width: opt.crop_width]
     else:
         temp = temp[0, :, :]
-    if opt.save_alter: temp = cv2.resize(temp, (opt.save_width, opt.save_height)) 
+    #if opt.save_alter: temp = cv2.resize(temp, (opt.save_width, opt.save_height)) 
+    img_shape = cv2.imread(leftname).shape
+    if opt.save_alter: temp = cv2.resize(temp, (img_shape[0], img_shape[1])) 
     skimage.io.imsave(savename, (temp * 256).astype('uint16'))
 
 
@@ -275,7 +277,10 @@ def test(leftname, rightname, savename):
         temp = temp[0, opt.crop_height - height: opt.crop_height, opt.crop_width - width: opt.crop_width]
     else:
         temp = temp[0, :, :]
-    if opt.save_alter: temp = cv2.resize(temp, (opt.save_width, opt.save_height)) 
+    #if opt.save_alter: temp = cv2.resize(temp, (opt.save_width, opt.save_height)) 
+    img_shape = cv2.imread(leftname).shape
+    if opt.save_alter: temp = cv2.resize(temp, (img_shape[0], img_shape[1])) 
+    
     plot_disparity(savename, temp, 192)
     savename_pfm = savename.replace('png','pfm') 
     temp = np.flipud(temp)
