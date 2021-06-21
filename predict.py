@@ -29,6 +29,8 @@ import numpy as np
 import pdb
 from path import Path
 
+import cv2
+
 opt = obtain_predict_args()
 print(opt)
 
